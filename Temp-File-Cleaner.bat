@@ -18,6 +18,9 @@
 @call :CleanFolder "%LOCALAPPDATA%\D3DSCache"
 
 @taskkill /f /im explorer.exe >nul 2>&1
+@call :CleanFolder "%APPDATA%\Microsoft\Windows\Recent"
+@call :CleanFolder "%APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations"
+@call :CleanFolder "%APPDATA%\Microsoft\Windows\Recent\CustomDestinations"
 @call :CleanFolder "%LOCALAPPDATA%\Microsoft\Windows\Explorer"
 @call :DeleteFile "%LOCALAPPDATA%\IconCache.db"
 @start "" explorer.exe
